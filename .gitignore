@@ -115,3 +115,5 @@ fabric.properties
 
 # Don't include and IDEA settings
 .idea
+
+/**/.DS_Store
