@@ -7,11 +7,30 @@ Wordclouds in go.
 ```go
 wordCounts := map[string]int{"important":42, "noteworthy":30, "meh":3}
 
+var cols = []color.RGBA{
+	{0x1b, 0x1b, 0x1b, 0xff},
+	{0x48, 0x48, 0x4B, 0xff},
+	{0x59, 0x3a, 0xee, 0xff},
+	{0x65, 0xCD, 0xFA, 0xff},
+	{0xff, 0xff, 0xff, 0xff},
+	{0x70, 0xD6, 0xBF, 0xff},
+}
+
+colors := make([]color.Color, 0)
+for _, c := range cols {
+	colors = append(colors, c)
+}
+
 w := wordclouds.NewWordcloud(
-	wordCounts,
-	wordclouds.FontFile("fonts/myfont.ttf"),
+        wordCounts,
+	wordclouds.FontFile("fonts/myfont.ttf),
+	wordclouds.FontMaxSize(600),
+	wordclouds.FontMinSize(15),
+	wordclouds.Colors(colors), //array of color.Color
+	wordclouds.BackgroundColor(color.RGBA{255, 255, 255, 255}), //optional background color.Color
 	wordclouds.Height(2048),
 	wordclouds.Width(2048),
+	wordclouds.RandomPlacement(false)
 )
 
 img := w.Draw()
