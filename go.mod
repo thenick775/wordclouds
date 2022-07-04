@@ -4,7 +4,6 @@ go 1.17
 
 require (
 	github.com/fogleman/gg v1.3.0
-	github.com/psykhi/wordclouds v0.0.0-20220103101922-7e3171a66cbc
 	github.com/satori/go.uuid v1.2.0
 	github.com/stretchr/testify v1.8.0
 	golang.org/x/image v0.0.0-20220617043117-41969df76e82

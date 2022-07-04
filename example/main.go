@@ -12,7 +12,7 @@ import (
 	"runtime/pprof"
 	"time"
 
-	"github.com/psykhi/wordclouds"
+	"github.com/thenick775/wordclouds"
 	"gopkg.in/yaml.v2"
 )
 
