@@ -36,6 +36,8 @@ w := wordclouds.NewWordcloud(
 img := w.Draw()
 ```
 
+See [example](https://github.com/thenick775/wordclouds/tree/master/example) for further details.
+
 # Options
 
 - Output height and width
